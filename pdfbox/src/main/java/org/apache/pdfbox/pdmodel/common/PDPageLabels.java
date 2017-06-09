@@ -342,19 +342,19 @@ public class PDPageLabels implements COSObjectable
             }
             else if (PDPageLabelRange.STYLE_LETTERS_LOWER.equals(style))
             {
-                return makeLetterLabel(pageIndex);
+                return makeLetterLabel(pageIndex).toLowerCase();
             }
             else if (PDPageLabelRange.STYLE_LETTERS_UPPER.equals(style))
             {
-                return makeLetterLabel(pageIndex).toUpperCase();
-        }
+                return makeLetterLabel(pageIndex);
+            }
             else if (PDPageLabelRange.STYLE_ROMAN_LOWER.equals(style))
             {
-                return makeRomanLabel(pageIndex).toLowerCase();
+                return makeRomanLabel(pageIndex);
             }
             else if (PDPageLabelRange.STYLE_ROMAN_UPPER.equals(style))
             {
-                return makeRomanLabel(pageIndex);
+                return makeRomanLabel(pageIndex).toUpperCase();
             }
             else
             {
